@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Shri Ram Medical & General Store",
     description:
       "24/7 trusted medical store for Allopathic, Ayurvedic & Veterinary medicines in Sirodi.",
-    url: "https://shriram-medical.vercel.app", // Replace with actual domain later
+    url: "https://srmgs.vercel.app", // Replace with actual domain later
     siteName: "Shri Ram Medical & General Store",
     locale: "en_IN",
     type: "website",
