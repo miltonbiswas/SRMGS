@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+/* Define brand color variables */
+:root {
+  --brand: #009688;
+  --brand-dark: #00695C;
+  --brand-light: #F7EECF;
+  --brand-gold: #FFE07D;
+  --brand-text: #4B5563;
+  --dark-slate: #0F172A;
+}
+
+@layer base {
+  body {
+    background-color: var(--brand-light);
+    color: var(--brand-text);
+    font-family: "Poppins", sans-serif;
+    transition: background 0.4s ease, color 0.4s ease;
+  }
+
+  @keyframes float-slow {
+  0%   { transform: translateY(0);   opacity: 0.6; }
+  50%  { transform: translateY(-12px); opacity: 1; }
+  100% { transform: translateY(0);   opacity: 0.6; }
+}
+.molecule-dot--1 {
+  top: 18%;
+  right: 14%;
+  animation: float-slow 5s ease-in-out infinite;
+}
+.molecule-dot--2 {
+  top: 65%;
+  right: 8%;
+  width: 10px;
+  height: 10px;
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.molecule-dot--3 {
+  top: 30%;
+  left: 5%;
+  width: 12px;
+  height: 12px;
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.molecule-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: rgba(59, 130, 246, 0.8);
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.6);
+}
+
+.menu-pill {
+  @apply px-4 py-2 rounded-full hover:bg-[#FFEAA7] hover:text-[#0A1A44] transition;
+}
+
+.menu-pill-mobile {
+  @apply text-[#0A1A44] dark:text-gray-200 hover:text-[#2563EB] transition;
+}
+
+
+  .dark body {
+    background-color: var(--dark-slate);
+    color: #e2e8f0;
+  }
+
+  section {
+    border-radius: 40px !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  img {
+    border-radius: 28px;
+  }
+
+  button,
+  .btn,
+  a {
+    border-radius: 9999px !important;
+    /* full pill */
+  }
+
+  /* Animations (unchanged) */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.9s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp .8s ease forwards;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn .8s ease forwards;
+  }
+
+  @keyframes soft-pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.08);
+    }
+
+    70% {
+      transform: scale(1.02);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+  .pulse-once {
+    animation: soft-pulse 1.4s ease-out 1;
+  }
+  /* --- PREMIUM SCROLLBAR & SELECTION --- */
+
+/* 1. Custom Text Selection Color */
+::selection {
+  background-color: #3B82F6; /* Brand Blue */
+  color: white;
+}
+
+/* 2. Custom Scrollbar (Webkit browsers like Chrome/Safari/Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E9F3FF; /* Light Brand BG */
+}
+.dark ::-webkit-scrollbar-track {
+  background: #020617; /* Dark Brand BG */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3B82F6; /* Brand Blue */
+  border-radius: 5px;
+  border: 2px solid #E9F3FF; /* Creates padding effect */
+}
+.dark ::-webkit-scrollbar-thumb {
+  border-color: #020617;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB; /* Darker Blue on Hover */
+}
+
+/* 3. Smooth Anchor Offset (Prevents Navbar covering titles) */
+html {
+  scroll-padding-top: 100px; /* Adjust based on navbar height */
+}
+}
