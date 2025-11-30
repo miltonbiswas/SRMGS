@@ -10,7 +10,7 @@ Unlike traditional local business sites, this platform is built like a **Premium
 
 ### 🌟 Live Demo
 
-[https://shrirammedical.vercel.app](https://www.google.com/search?q=https://shrirammedical.vercel.app "null") _(Replace with your actual Vercel link)_
+[https://srmgs.vercel.app](https://www.google.com/search?q=srmgs.vercel.app "null") _(Replace with your actual Vercel link)_
 
 ## ✨ Key Features
 
